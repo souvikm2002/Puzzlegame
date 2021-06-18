@@ -19,7 +19,7 @@
 
 .mainbody{
     background-color: rgba(215, 236, 31, 0.4);
-    height: 43rem;
+    height: 45rem;
     margin-left: 2%;
     margin-right: 2%;
     text-align: center;
@@ -165,14 +165,14 @@
 
 .box{
     position:absolute;
-    border: 2px solid rgb(17, 191, 214);
+    border: 2px solid rgb(0, 129, 146);
     margin-top: 11rem;
     margin-left: 83%;
     width:20rem;
     height:25.2rem;
     transform: translate(-50%);
     border-radius: 20px;
-    background-color: rgba(23, 172, 231, 0.45);
+    background-color: rgba(23, 172, 231, 0.281);
 }
 .leaderboard{
     font-size:xxx-large;
@@ -207,7 +207,7 @@
     position: absolute;
     width:18rem;
     margin-left: 4%;
-    background-color: rgb(78, 156, 161,0.8);
+    background-color: rgba(78, 114, 161, 0.8);
     border: rgba(23, 165, 231, 0.45);
     border-radius: 6px;
     height: 3rem;
@@ -217,7 +217,7 @@
     padding-top: 0.5rem;
     text-align: left;
     padding-left: 0.5rem;
-    color: rgb(180, 4, 4);
+    color: rgb(163, 0, 0);
     display: flex;
 
 }
