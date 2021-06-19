@@ -17,11 +17,11 @@
     }
 
     .box{
-        margin-top: 50rem;
+        margin-top: 53rem;
         margin-left: 70%;
     }
     .boxrule{
-        margin-top: 51rem;
+        margin-top: 54rem;
         margin-left: 24%;
     }
 
@@ -30,11 +30,11 @@
     }
 
     .box1{
-        margin-top: 41rem;
+        margin-top: 43.2rem;
     }
     .footer{
         padding-top: 3rem;
-        height: 10rem;
+        height: 13rem;
     }
 
     .links{
@@ -46,5 +46,6 @@
     .challangebox{
         margin-left: 14%;
         margin-top: 38rem;
+        width:11.2rem;
     }
 }
