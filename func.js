@@ -291,7 +291,7 @@ function check1(){
     if(a==0){
         //alert("YOU WIN!!. Press reset to play again");
         let item=document.getElementById("result");
-        item.innerText=`YOU WON!!`;
+        item.innerText=`YOU WIN!!`;
         setTimeout(blank,2000);
 
         if(i>counttimer){
@@ -315,9 +315,9 @@ function check2(){
         }
     }
     if(b==0){
-        //alert("YOU WIN!!. Press reset to play again");
+        //alert("YOU WIN!! Press reset to play again");
         let item2=document.getElementById("result");
-        item2.innerText=`YOU WON!!`;
+        item2.innerText=`YOU WIN!!`;
         setTimeout(blank,2000);
         
         if(init>counttimer){
@@ -356,7 +356,7 @@ function change(){
     let challange=document.getElementById("challange");
     if(!clicked){
         clicked=true;
-        alert("NOTE: CHALLANGE MODE activated!! Here, a random box is freezed for 6 seconds, disabling the user to move that particuler box. Press'ok' to continue");
+        alert("NOTE: CHALLENGE MODE activated!! Here, a random box is freezed for 6 seconds, disabling the user to move that particuler box. Press 'ok' to continue");
         //challange.innerText="Challange mode:- ON";
     }
     else{
