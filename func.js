@@ -4,6 +4,8 @@ function swapTiles(cell1,cell2){
     document.getElementById(cell2).className=temp;
 }
 
+alert("By pressing the 'moon' icon at the right-corner, You can switch to dark mode");
+
 function shuffle(){
     for(var row=1;row<=4;row++){
         for(var column=1;column<=4;column++){
@@ -61,9 +63,24 @@ function togglehide2(){   //display 3*3
 
 
 function clickTile(row,column){
+   
+
+    if(clicked==true){    //challange portion. If value is true/ challange mode is on
+        time=setInterval(()=>{
+            rowf= Math.floor(Math.random()*4+1);
+            columnf= Math.floor(Math.random()*4+1);
+        },6000);
+        if((row!=rowf)||(column!=columnf)){
+            for1(row,column);   //function called
+        }
+    }
+    else{
+        for1(row,column);
+    }    
+}
+function for1(row,column){          //for 4*4 matrix
     var cell=document.getElementById("cell"+row+column);
     var tile=cell.className;
-  
     if(tile!="tile16"){
         if(row<4){
            /* if(document.getElementById("cell"+(row+1)+column).className=="tile16"){
@@ -136,11 +153,26 @@ function clickTile(row,column){
             }
 
         }
-    }
-    //check1();    
+    }   
 }
 
 function clickTiles(row,column){    //for 3*3 matrix
+    if(clicked==true){    //challange portion
+        time=setInterval(()=>{
+            rowf1= Math.floor(Math.random()*3+1);
+            columnf1= Math.floor(Math.random()*3+1);
+        },6000);
+        if((row!=rowf1)||(column!=columnf1)){
+            for2(row,column);   //function called
+        }
+    }
+    else{
+        for2(row,column);
+    }
+    
+}
+
+function for2(row,column){        //for 3*3 matrix
     var cells=document.getElementById("cells"+row+column);
     var tile=cells.className;
     if(tile!="tiles9"){
@@ -213,8 +245,6 @@ function clickTiles(row,column){    //for 3*3 matrix
             }
         }
     }
-    //check2();
-    
 }
 var timer=document.getElementById("timer");
 let clock;
@@ -317,19 +347,21 @@ colormode.onclick=function(){
 
 var clicked=false;
 let time;
+let rowf;
+let columnf;
+let rowf1;
+let columnf1;
 
 function change(){
     let challange=document.getElementById("challange");
     if(!clicked){
         clicked=true;
-        challange.innerText="Challange mode:- ON";
-        time=setInterval(()=>{},6000);
+        alert("NOTE: CHALLANGE MODE activated!! Here, a random box is freezed for 6 seconds, disabling the user to move that particuler box. Press'ok' to continue");
+        //challange.innerText="Challange mode:- ON";
     }
     else{
         clicked=false;
         clearInterval(time);
-        challange.innerText="Challange mode:- OFF";
+        //challange.innerText="Challange mode:- OFF";
     }
 }
-var rowf= Math.floor(Math.random()*4+1);
-var columnf= Math.floor(Math.random()*4+1);
