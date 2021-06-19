@@ -1,6 +1,7 @@
 @media only screen and (max-width: 1300px){
     .navbar{
-        font-size: 30px;
+        font-size: 56px;
+        padding-bottom: 40px;
     }
 
     .ul1{
@@ -33,12 +34,17 @@
     }
     .footer{
         padding-top: 3rem;
-        height: 8rem;
+        height: 10rem;
     }
 
     .links{
         display:block;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .challangebox{
+        margin-left: 14%;
+        margin-top: 38rem;
     }
 }

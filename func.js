@@ -66,35 +66,75 @@ function clickTile(row,column){
   
     if(tile!="tile16"){
         if(row<4){
-            if(document.getElementById("cell"+(row+1)+column).className=="tile16"){
+           /* if(document.getElementById("cell"+(row+1)+column).className=="tile16"){
                 swapTiles("cell"+row+column,"cell"+(row+1)+column);
                 moves++; displaymoves();
                 return;
-            }
+            }*/
+
+             for(let i=1;i<=4-row;i++){
+                if(document.getElementById("cell"+(row+i)+column).className=="tile16"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cell"+(row+j)+column,"cell"+(row+j-1)+column);
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
+                }
+        
         }
 
         if(row>1){
-            if(document.getElementById("cell"+(row-1)+column).className=="tile16"){
+            /*if(document.getElementById("cell"+(row-1)+column).className=="tile16"){
                 swapTiles("cell"+row+column,"cell"+(row-1)+column);
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=row-1;i>=1;i--){
+            if(document.getElementById("cell"+(row-i)+column).className=="tile16"){
+                for(let j=i;j>=1;j--){
+                    swapTiles("cell"+(row-j)+column,"cell"+(row-j+1)+column);
+                    moves++; displaymoves();
+                    //return;
+                }
             }
+        }
+            
         }
 
         if(column<4){
-            if(document.getElementById("cell"+row+(column+1)).className=="tile16"){
+            /*if(document.getElementById("cell"+row+(column+1)).className=="tile16"){
                 swapTiles("cell"+row+column,"cell"+row+(column+1));
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=1;i<=4-column;i++){
+                if(document.getElementById("cell"+row+(column+i)).className=="tile16"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cell"+row+(column+j),"cell"+row+(column+j-1));
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
         }
 
         if(column>1){
-            if(document.getElementById("cell"+row+(column-1)).className=="tile16"){
+            /*if(document.getElementById("cell"+row+(column-1)).className=="tile16"){
                 swapTiles("cell"+row+column,"cell"+row+(column-1));
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=column-1;i>=1;i--){
+                if(document.getElementById("cell"+row+(column-i)).className=="tile16"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cell"+row+(column-j),"cell"+row+(column-j+1));
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
+
         }
     }
     //check1();    
@@ -105,34 +145,71 @@ function clickTiles(row,column){    //for 3*3 matrix
     var tile=cells.className;
     if(tile!="tiles9"){
         if(row<3){
-            if(document.getElementById("cells"+(row+1)+column).className=="tiles9"){
+            /*if(document.getElementById("cells"+(row+1)+column).className=="tiles9"){
                 swapTiles("cells"+row+column,"cells"+(row+1)+column);
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=1;i<=3-row;i++){
+                if(document.getElementById("cells"+(row+i)+column).className=="tiles9"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cells"+(row+j)+column,"cells"+(row+j-1)+column);
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
         }
 
         if(row>1){
-            if(document.getElementById("cells"+(row-1)+column).className=="tiles9"){
+            /*if(document.getElementById("cells"+(row-1)+column).className=="tiles9"){
                 swapTiles("cells"+row+column,"cells"+(row-1)+column);
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=row-1;i>=1;i--){
+                if(document.getElementById("cells"+(row-i)+column).className=="tiles9"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cells"+(row-j)+column,"cells"+(row-j+1)+column);
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
+
         }
 
         if(column<3){
-            if(document.getElementById("cells"+row+(column+1)).className=="tiles9"){
+            /*if(document.getElementById("cells"+row+(column+1)).className=="tiles9"){
                 swapTiles("cells"+row+column,"cells"+row+(column+1));
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=1;i<=3-column;i++){
+                if(document.getElementById("cells"+row+(column+i)).className=="tiles9"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cells"+row+(column+j),"cells"+row+(column+j-1));
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
         }
 
         if(column>1){
-            if(document.getElementById("cells"+row+(column-1)).className=="tiles9"){
+            /*if(document.getElementById("cells"+row+(column-1)).className=="tiles9"){
                 swapTiles("cells"+row+column,"cells"+row+(column-1));
                 moves++; displaymoves();
                 return;
+            }*/
+            for(let i=column-1;i>=1;i--){
+                if(document.getElementById("cells"+row+(column-i)).className=="tiles9"){
+                    for(let j=i;j>=1;j--){
+                        swapTiles("cells"+row+(column-j),"cells"+row+(column-j+1));
+                        moves++; displaymoves();
+                        //return;
+                    }
+                }
             }
         }
     }
@@ -238,3 +315,21 @@ colormode.onclick=function(){
     }
 }
 
+var clicked=false;
+let time;
+
+function change(){
+    let challange=document.getElementById("challange");
+    if(!clicked){
+        clicked=true;
+        challange.innerText="Challange mode:- ON";
+        time=setInterval(()=>{},6000);
+    }
+    else{
+        clicked=false;
+        clearInterval(time);
+        challange.innerText="Challange mode:- OFF";
+    }
+}
+var rowf= Math.floor(Math.random()*4+1);
+var columnf= Math.floor(Math.random()*4+1);
