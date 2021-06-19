@@ -167,6 +167,7 @@ function displaymoves(){
     check2();
 }
 displaymoves();
+
 let i=100000;
 
 function check1(){
@@ -185,10 +186,11 @@ function check1(){
         let item=document.getElementById("result");
         item.innerText=`YOU WON!!`;
         setTimeout(blank,2000);
+
         if(i>counttimer){
-            i=counttimer;
-            localStorage.setItem("key",`  ${min} m : ${sec} s`);       //store and print the value of minimum time
-            document.getElementById("highscore").innerHTML = localStorage.getItem("key");
+            i=counttimer;        //i is minimum time
+            localStorage.setItem("key",` ${min} m : ${sec} s`);
+            document.getElementById("highscore").innerHTML=localStorage.getItem("key");
         }
         clearInterval(clock);
     }
@@ -210,10 +212,11 @@ function check2(){
         let item2=document.getElementById("result");
         item2.innerText=`YOU WON!!`;
         setTimeout(blank,2000);
-        if(i>counttimer){
-            i=counttimer;
-            localStorage.setItem("key",`  ${min} m : ${sec} s`);   //to store the value
-            document.getElementById("highscore").innerHTML = localStorage.getItem("key");   //to print the value
+        
+        if(init>counttimer){
+            init=counttimer;        //init is minimum time
+            localStorage.setItem("key",` ${min} m ${sec} s`);
+            document.getElementById("highscore").innerHTML=localStorage.getItem("key");
         }
         clearInterval(clock);
     }

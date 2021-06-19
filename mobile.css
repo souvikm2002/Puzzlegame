@@ -1,0 +1,44 @@
+@media only screen and (max-width: 1300px){
+    .navbar{
+        font-size: 30px;
+    }
+
+    .ul1{
+        display: none;
+    }
+    .ul2, .ul3{
+        margin-top: 15px;
+    }
+
+    .mainbody{
+        height: 94rem;
+        padding-top: 4rem;
+    }
+
+    .box{
+        margin-top: 50rem;
+        margin-left: 70%;
+    }
+    .boxrule{
+        margin-top: 51rem;
+        margin-left: 24%;
+    }
+
+    .tabledisplay , .tabledisplay2{
+        margin-top: 11rem;
+    }
+
+    .box1{
+        margin-top: 41rem;
+    }
+    .footer{
+        padding-top: 3rem;
+        height: 8rem;
+    }
+
+    .links{
+        display:block;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
