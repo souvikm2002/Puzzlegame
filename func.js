@@ -40,6 +40,7 @@ function togglehide1(){   //display 4*4
     displaytime();
     moves=0;
     displaymoves();
+    shuffle();
     document.getElementById("result").innerText=``;
 }
 
@@ -54,6 +55,7 @@ function togglehide2(){   //display 3*3
     displaytime();     //we again start displaytime
     moves=0;
     displaymoves();
+    shuffle();
     document.getElementById("result").innerText=``;
 }
 
@@ -95,7 +97,7 @@ function clickTile(row,column){
             }
         }
     }
-    check1();    
+    //check1();    
 }
 
 function clickTiles(row,column){    //for 3*3 matrix
@@ -134,19 +136,21 @@ function clickTiles(row,column){    //for 3*3 matrix
             }
         }
     }
-    check2();
+    //check2();
     
 }
 var timer=document.getElementById("timer");
 let clock;
 let counttimer=0;
+let sec;
+let min;
 
 function displaytime(){
     counttimer=0;
     clock=setInterval(()=>{      //clock = setInterval(()=>{},1000); same as clock = setInterval(function,1000);
         counttimer++;
-        let sec=counttimer%60;
-        let min=parseInt(counttimer/60);
+        sec=counttimer%60;
+        min=parseInt(counttimer/60);
         timer.innerText=`  ${min} : ${sec} `;
     },1000);
 }
@@ -159,8 +163,11 @@ var move=document.getElementById("movement");
 
 function displaymoves(){
     move.innerText=`${moves}`;
+    check1();
+    check2();
 }
 displaymoves();
+let i=100000;
 
 function check1(){
     let a=0;
@@ -178,6 +185,12 @@ function check1(){
         let item=document.getElementById("result");
         item.innerText=`YOU WON!!`;
         setTimeout(blank,2000);
+        if(i>counttimer){
+            i=counttimer;
+            localStorage.setItem("key",`  ${min} m : ${sec} s`);       //store and print the value of minimum time
+            document.getElementById("highscore").innerHTML = localStorage.getItem("key");
+        }
+        clearInterval(clock);
     }
 }
 
@@ -185,18 +198,24 @@ function check2(){
     let b=0;
     for(let i=1;i<=3;i++){
         for(let j=1;j<=3;j++){
-            let item=document.getElementById("cell"+i+j).className;
+            let item1=document.getElementById("cells"+i+j).className;
             let s=(i-1)*3+j;
-            if(item!="tile"+s){
+            if(item1!="tiles"+s){
                 b=1;
             }
         }
     }
     if(b==0){
         //alert("YOU WIN!!. Press reset to play again");
-        let item=document.getElementById("result");
-        item.innerText=`YOU WON!!`;
+        let item2=document.getElementById("result");
+        item2.innerText=`YOU WON!!`;
         setTimeout(blank,2000);
+        if(i>counttimer){
+            i=counttimer;
+            localStorage.setItem("key",`  ${min} m : ${sec} s`);   //to store the value
+            document.getElementById("highscore").innerHTML = localStorage.getItem("key");   //to print the value
+        }
+        clearInterval(clock);
     }
 }
 
@@ -204,3 +223,15 @@ function blank(){
     let item=document.getElementById("result");
     item.innerText=`Click RESET`;
 }
+
+var colormode=document.getElementById("mode");
+colormode.onclick=function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        colormode.src="https://img.icons8.com/emoji/48/000000/sun-emoji.png";
+    }
+    else{
+        colormode.src="https://img.icons8.com/ios-filled/50/000000/crescent-moon.png";
+    }
+}
+

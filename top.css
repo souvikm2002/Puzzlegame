@@ -4,21 +4,59 @@
     padding:0%;
 }
 
+:root{
+    --primary-color: rgb(28, 226, 94);
+    --second-color:brown ;
+    --third-color: rgba(215, 236, 31, 0.4);
+    --fourth-color: rgba(23, 172, 231, 0.281);
+    --fifth-color: rgb(163, 0, 0);
+    --sixth-color: rgb(78, 4, 4);
+    --seven-color: rgb(0, 129, 146);
+    --eight-color: rgb(4, 21, 78);
+    --nine-color: rgba(0, 97, 223, 0.842);
+    --ten-color: rgba(23, 165, 231, 0.45);
+    --eleven-color: rgba(228, 141, 245, 0.2);
+    --twelve-color: rgb(17, 30, 214);
+    --thirteen-color: rgb(4, 29, 255);
+}
+.dark-theme{
+    --primary-color:black ;
+    --second-color:white ;
+    --third-color: rgba(0, 0, 0, 0.692);
+    --fourth-color: rgba(248, 248, 248, 0);
+    --fifth-color:white ;
+    --sixth-color:rgb(248, 252, 248) ;
+    --seven-color: rgba(0, 129, 146, 0);
+    --eight-color: white;
+    --nine-color: rgba(0, 97, 223, 0);
+    --ten-color: rgba(23, 165, 231, 0);
+    --eleven-color: white;
+    --twelve-color: rgba(255, 255, 255, 0);
+    --thirteen-color: white;
+}
+
+#mode{
+    height:40px;
+    width:40px;
+
+}
+
 .navbar{
     width: 100%;
     position:fixed;
     text-align: center;
-    font-size: 75px;
-    background-color: rgb(28, 226, 94);
-    color: brown;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 55px;
+    background-color: var(--primary-color);  /*primary*/
+    color: var(--second-color);  /*second*/
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     height: 70px;
     padding-top: 5px;
     padding-bottom: 15px;
+    z-index: 2;
 }
 
 .mainbody{
-    background-color: rgba(215, 236, 31, 0.4);
+    background-color: var(--third-color);  /*third*/
     height: 45rem;
     margin-left: 2%;
     margin-right: 2%;
@@ -35,7 +73,7 @@
 .tabledisplay{
     position:absolute;
     display: table;
-    border: 4px solid rgba(0, 97, 223, 0.842);
+    border: 4px solid var(--nine-color);  /*nine*/
     margin-top: 10rem;
     margin-left: 48%;
     width:25rem;
@@ -48,7 +86,7 @@
 .tabledisplay2{
     position:absolute;
     display: table;
-    border: 4px solid rgba(0, 97, 223, 0.842);
+    border: 4px solid var(--nine-color);
     margin-top: 10rem;
     margin-left: 48%;
     width:25rem;
@@ -120,8 +158,8 @@
     transform: translate(-50%);   /*brings alignment relative to center of button*/
     border-radius: 8px;
     padding: 3px;
-    background-color: brown;
-    color: rgb(19, 235, 30);
+    background-color: rgb(165, 42, 149);
+    color: rgb(248, 248, 248);
     border: 2px solid rgb(134, 59, 209);      
 }
 .button3{
@@ -131,8 +169,8 @@
     transform: translate(-50%);   /*brings alignment relative to center of button*/
     border-radius: 8px;
     padding: 3px;
-    background-color: brown;
-    color: rgb(27, 204, 36);
+    background-color: rgb(165, 42, 149);
+    color: rgb(248, 248, 248);
     border: 2px solid rebeccapurple;
 }
 
@@ -165,18 +203,18 @@
 
 .box{
     position:absolute;
-    border: 2px solid rgb(0, 129, 146);
+    border: 2px solid var(--seven-color);    /*seven*/
     margin-top: 11rem;
     margin-left: 83%;
     width:20rem;
     height:25.2rem;
     transform: translate(-50%);
     border-radius: 20px;
-    background-color: rgba(23, 172, 231, 0.281);
+    background-color: var(--fourth-color); /*fourth*/
 }
 .leaderboard{
     font-size:xxx-large;
-    color: rgb(4, 21, 78);
+    color: var(--eight-color);   /*eight*/
     font-family: 'Brush Script MT', cursive;;
     text-align: center;
 }
@@ -193,14 +231,32 @@
 }
 .box1{
     position:absolute;
-    border: 1px solid rgb(17, 30, 214);
+    border: 1px solid var(--twelve-color);  /*twelve*/
     margin-top: 38rem;
     margin-left: 48%;
     width:30rem;
     height:4rem;
     transform: translate(-50%);
     border-radius: 20px;
-    background-color: rgba(23, 165, 231, 0.45);
+    background-color: var(--ten-color);  /*ten*/
+}
+.boxscore{
+    position:absolute;
+    border: 1px solid rgb(17, 30, 214);
+    margin-top: 7.5rem;
+    margin-left: 52.8%;
+    width:15rem;
+    height:1.7rem;
+    transform: translate(-50%);
+    border-radius: 1px;
+    background-color: var(--eleven-color);  /*eleven*/
+    padding-left: 8px;
+    font-size: large;
+    padding-top: 2px;
+    text-align: left;
+    display: flex;
+    border-radius: 4px;
+    font-family: monospace;
 }
 
 .moves{
@@ -217,7 +273,7 @@
     padding-top: 0.5rem;
     text-align: left;
     padding-left: 0.5rem;
-    color: rgb(163, 0, 0);
+    color: var(--fifth-color);    /*fifth*/
     display: flex;
 
 }
@@ -236,7 +292,7 @@
     padding-top: 0.5rem;
     text-align: center;
     padding-left: 0.5rem;
-    color: rgb(8, 4, 255);
+    color: var(--thirteen-color);   /*thirteen*/
 
 }
 .boxrule{
@@ -252,13 +308,13 @@
 }
 .rules{
     font-size:xxx-large;
-    color: rgb(78, 4, 4);
+    color: var(--sixth-color);   /*sixth*/
     font-family: 'Brush Script MT', cursive;;
     text-align: center;
 }
 .content{
     font-size: xx-large;
-    color: rgb(78, 4, 41);
+    color: var(--sixth-color);   /*sixth*/
     font-family: 'Brush Script MT', cursive;
     text-align: center;
 }
@@ -276,8 +332,20 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     padding-top: 0.5rem;
     text-align: center;
-    padding-left: 2.7rem;
+    padding-left: 2.5rem;
     color: rgb(9, 56, 23);
     display: flex;
+}
 
+.color{
+    position: absolute;
+    background-color: rgba(184, 135, 11, 0.226);
+    height: 36rem;
+    width:92%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 7rem;
+    border-radius: 10px;
+    z-index: -2;
+    clip-path: polygon(0 0 , 100% 0,100% 10%, 60% 10%, 40% 60% ,25% 100%,0 100%);
 }
