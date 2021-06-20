@@ -256,9 +256,9 @@ displaymoves();
 
 let i=100000000;
 
-/*if(localStorage.getItem("key").length()!=0){
+if(localStorage.getItem("key")!=null){
     document.getElementById("highscore").innerHTML=localStorage.getItem("key");    //to store previous timer string
-}*/
+}
 
 
 function check1(){
@@ -272,6 +272,7 @@ function check1(){
             }
         }
     }
+    let sent;        //declared a string variable to store data
     if(a==0){
         //alert("YOU WIN!!. Press reset to play again");
         let item=document.getElementById("result");
@@ -280,7 +281,9 @@ function check1(){
 
         if(i>counttimer){
             i=counttimer;        //i is minimum time
-            localStorage.setItem("key",` ${min} m : ${sec} s`);
+            //localStorage.setItem("key",` ${min} m : ${sec} s`);
+            sent=`${min} m : ${sec} s`;     
+            localStorage.setItem("key",sent);
             document.getElementById("highscore").innerHTML=localStorage.getItem("key");
         }
         clearInterval(clock);
@@ -306,7 +309,9 @@ function check2(){
         
         if(i>counttimer){
             i=counttimer;        //i is minimum time
-            localStorage.setItem("key",` ${min} m ${sec} s`);
+            //localStorage.setItem("key",` ${min} m ${sec} s`);
+            sent=`${min} m : ${sec} s`;
+            localStorage.setItem("key",sent);
             document.getElementById("highscore").innerHTML=localStorage.getItem("key");
         }
         clearInterval(clock);
@@ -351,7 +356,7 @@ function change(){
 }
 
 function disrule(){
-    alert('INSTRUCTIONS:\n\nWelcome To Puzzlegame!!\n1. Click on suitable boxes to rearrange them\n2. You can swipe multiple boxes at a time if blank box lies in same row/column\n3. When all boxes are arranged in particular order, you can see status message "YOU WIN!!"\n4. You can switch between 3*3 and 4*4 puzzle box by clicking "Display 3,3" and "Display 4,4" buttons\n\n  All the best!!');
+    alert('INSTRUCTIONS:\n\nWelcome To Puzzlegame!!\n1. Click on suitable boxes to rearrange them\n2. You can swipe multiple boxes at a time if blank box lies in same row/column\n3. When all boxes are arranged in particular order, you can see status message "YOU WIN!!"\n4. Your highest score will be recorded \n5. You can switch between 3*3 and 4*4 puzzle box by clicking "Display 3,3" and "Display 4,4" buttons\n\n  All the best!!');
 }
 
 
