@@ -83,13 +83,7 @@ function for1(row,column){          //for 4*4 matrix
     var tile=cell.className;
     if(tile!="tile16"){
         if(row<4){
-           /* if(document.getElementById("cell"+(row+1)+column).className=="tile16"){
-                swapTiles("cell"+row+column,"cell"+(row+1)+column);
-                moves++; displaymoves();
-                return;
-            }*/
-
-             for(let i=1;i<=4-row;i++){
+                for(let i=1;i<=4-row;i++){
                 if(document.getElementById("cell"+(row+i)+column).className=="tile16"){
                     for(let j=i;j>=1;j--){
                         swapTiles("cell"+(row+j)+column,"cell"+(row+j-1)+column);
@@ -102,11 +96,6 @@ function for1(row,column){          //for 4*4 matrix
         }
 
         if(row>1){
-            /*if(document.getElementById("cell"+(row-1)+column).className=="tile16"){
-                swapTiles("cell"+row+column,"cell"+(row-1)+column);
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=row-1;i>=1;i--){
             if(document.getElementById("cell"+(row-i)+column).className=="tile16"){
                 for(let j=i;j>=1;j--){
@@ -120,11 +109,6 @@ function for1(row,column){          //for 4*4 matrix
         }
 
         if(column<4){
-            /*if(document.getElementById("cell"+row+(column+1)).className=="tile16"){
-                swapTiles("cell"+row+column,"cell"+row+(column+1));
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=1;i<=4-column;i++){
                 if(document.getElementById("cell"+row+(column+i)).className=="tile16"){
                     for(let j=i;j>=1;j--){
@@ -137,11 +121,6 @@ function for1(row,column){          //for 4*4 matrix
         }
 
         if(column>1){
-            /*if(document.getElementById("cell"+row+(column-1)).className=="tile16"){
-                swapTiles("cell"+row+column,"cell"+row+(column-1));
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=column-1;i>=1;i--){
                 if(document.getElementById("cell"+row+(column-i)).className=="tile16"){
                     for(let j=i;j>=1;j--){
@@ -159,7 +138,7 @@ function for1(row,column){          //for 4*4 matrix
 function clickTiles(row,column){    //for 3*3 matrix
     if(clicked==true){    //challange portion
         time=setInterval(()=>{
-            rowf1= Math.floor(Math.random()*3+1);
+            rowf1= Math.floor(Math.random()*3+1);   //get a random 3*3 cell
             columnf1= Math.floor(Math.random()*3+1);
         },6000);
         if((row!=rowf1)||(column!=columnf1)){
@@ -177,11 +156,6 @@ function for2(row,column){        //for 3*3 matrix
     var tile=cells.className;
     if(tile!="tiles9"){
         if(row<3){
-            /*if(document.getElementById("cells"+(row+1)+column).className=="tiles9"){
-                swapTiles("cells"+row+column,"cells"+(row+1)+column);
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=1;i<=3-row;i++){
                 if(document.getElementById("cells"+(row+i)+column).className=="tiles9"){
                     for(let j=i;j>=1;j--){
@@ -194,11 +168,6 @@ function for2(row,column){        //for 3*3 matrix
         }
 
         if(row>1){
-            /*if(document.getElementById("cells"+(row-1)+column).className=="tiles9"){
-                swapTiles("cells"+row+column,"cells"+(row-1)+column);
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=row-1;i>=1;i--){
                 if(document.getElementById("cells"+(row-i)+column).className=="tiles9"){
                     for(let j=i;j>=1;j--){
@@ -212,11 +181,6 @@ function for2(row,column){        //for 3*3 matrix
         }
 
         if(column<3){
-            /*if(document.getElementById("cells"+row+(column+1)).className=="tiles9"){
-                swapTiles("cells"+row+column,"cells"+row+(column+1));
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=1;i<=3-column;i++){
                 if(document.getElementById("cells"+row+(column+i)).className=="tiles9"){
                     for(let j=i;j>=1;j--){
@@ -229,11 +193,6 @@ function for2(row,column){        //for 3*3 matrix
         }
 
         if(column>1){
-            /*if(document.getElementById("cells"+row+(column-1)).className=="tiles9"){
-                swapTiles("cells"+row+column,"cells"+row+(column-1));
-                moves++; displaymoves();
-                return;
-            }*/
             for(let i=column-1;i>=1;i--){
                 if(document.getElementById("cells"+row+(column-i)).className=="tiles9"){
                     for(let j=i;j>=1;j--){
@@ -275,7 +234,12 @@ function displaymoves(){
 }
 displaymoves();
 
-let i=100000;
+let i=100000000;
+
+/*if(localStorage.getItem("key").length()!=0){
+    document.getElementById("highscore").innerHTML=localStorage.getItem("key");    //to store previous timer string
+}*/
+
 
 function check1(){
     let a=0;
@@ -320,8 +284,8 @@ function check2(){
         item2.innerText=`YOU WIN!!`;
         setTimeout(blank,2000);
         
-        if(init>counttimer){
-            init=counttimer;        //init is minimum time
+        if(i>counttimer){
+            i=counttimer;        //i is minimum time
             localStorage.setItem("key",` ${min} m ${sec} s`);
             document.getElementById("highscore").innerHTML=localStorage.getItem("key");
         }
@@ -365,3 +329,62 @@ function change(){
         //challange.innerText="Challange mode:- OFF";
     }
 }
+
+
+/*---------------TEST CODES------------*/
+
+/*if(row<4){
+     if(document.getElementById("cell"+(row+1)+column).className=="tile16"){
+         swapTiles("cell"+row+column,"cell"+(row+1)+column);
+         moves++; displaymoves();
+         return;
+     }*/
+
+/*if(row>1){
+        if(document.getElementById("cell"+(row-1)+column).className=="tile16"){
+            swapTiles("cell"+row+column,"cell"+(row-1)+column);
+            moves++; displaymoves();
+            return;
+    }*/
+
+/*if(column<4){
+        if(document.getElementById("cell"+row+(column+1)).className=="tile16"){
+            swapTiles("cell"+row+column,"cell"+row+(column+1));
+            moves++; displaymoves();
+            return;
+        }*/
+
+/*if(column>1){
+            if(document.getElementById("cell"+row+(column-1)).className=="tile16"){
+            swapTiles("cell"+row+column,"cell"+row+(column-1));
+            moves++; displaymoves();
+            return;
+    }*/
+
+    /*if(row<3){
+        if(document.getElementById("cells"+(row+1)+column).className=="tiles9"){
+            swapTiles("cells"+row+column,"cells"+(row+1)+column);
+            moves++; displaymoves();
+            return;
+        }*/
+
+    /*if(row>1){
+            /*if(document.getElementById("cells"+(row-1)+column).className=="tiles9"){
+                swapTiles("cells"+row+column,"cells"+(row-1)+column);
+                moves++; displaymoves();
+                return;
+        }*/
+
+    /*if(column<3){
+            if(document.getElementById("cells"+row+(column+1)).className=="tiles9"){
+                swapTiles("cells"+row+column,"cells"+row+(column+1));
+                moves++; displaymoves();
+                return;
+        }*/
+
+     /*if(column>1){
+                if(document.getElementById("cell"+row+(column-1)).className=="tile16"){
+                    swapTiles("cell"+row+column,"cell"+row+(column-1));
+                    moves++; displaymoves();
+                    return;
+        }*/

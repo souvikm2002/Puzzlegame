@@ -49,3 +49,36 @@
         width:11.2rem;
     }
 }
+
+@media only screen and (max-width: 1100px){
+    .box1{
+        height:6rem;
+        padding-top: 0.0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 3rem;
+        padding-bottom: 0.0rem;
+    }
+    .button, .button2, .button3{
+        padding: 1rem 1.3rem 1rem 1.3rem;
+        border-radius: 2rem;
+        border: 5px solid rgb(134, 59, 209);
+        font-weight: 160;
+    }
+    
+    .box{
+        margin-top: 55.5rem;
+    }
+    .boxrule{
+        margin-top: 56.6rem;
+    }
+
+    .challangebox{
+        padding: 13px;
+        font-size:large;
+        margin-left: 15%;
+        width: 18%;
+        min-width: 11rem;
+    }
+    
+}
