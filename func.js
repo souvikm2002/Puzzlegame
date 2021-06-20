@@ -31,6 +31,26 @@ function shuffle(){
 
 }
 
+function swipe(){
+    for(var row=1;row<=4;row++){
+        for(var column=1;column<=4;column++){
+            var row2= Math.floor(Math.random()*4+1);
+            var column2= Math.floor(Math.random()*4+1);
+
+            swapTiles("cell"+row+column,"cell"+row2+column2);
+        }
+    }
+    for(var row=1;row<=3;row++){
+        for(var column=1;column<=3;column++){
+            var row2= Math.floor(Math.random()*3+1);
+            var column2= Math.floor(Math.random()*3+1);
+
+            swapTiles("cells"+row+column,"cells"+row2+column2);
+        }
+    }
+}
+swipe();
+
 function togglehide1(){   //display 4*4
     let table=document.getElementById('table');   //4*4
     let table2=document.getElementById('table2');   //3*3
@@ -320,7 +340,7 @@ function change(){
     let challange=document.getElementById("challange");
     if(!clicked){
         clicked=true;
-        alert("NOTE: CHALLENGE MODE activated!! Here, a random box is freezed for 6 seconds, disabling the user to move that particuler box. Press 'ok' to continue");
+        alert("NOTE: CHALLENGE MODE activated!!\nHere, a random box is freezed for 6 seconds, disabling the user to move that particuler box.\nPress 'ok' to continue");
         //challange.innerText="Challange mode:- ON";
     }
     else{
@@ -328,6 +348,10 @@ function change(){
         clearInterval(time);
         //challange.innerText="Challange mode:- OFF";
     }
+}
+
+function disrule(){
+    alert('INSTRUCTIONS:\n\nWelcome To Puzzlegame!!\n1. Click on suitable boxes to rearrange them\n2. You can swipe multiple boxes at a time if blank box lies in same row/column\n3. When all boxes are arranged in particular order, you can see status message "YOU WIN!!"\n4. You can switch between 3*3 and 4*4 puzzle box by clicking "Display 3,3" and "Display 4,4" buttons\n\n  All the best!!');
 }
 
 

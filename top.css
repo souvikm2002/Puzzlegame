@@ -19,7 +19,8 @@
     --eleven-color: rgba(228, 141, 245, 0.2);
     --twelve-color: rgb(17, 30, 214);
     --thirteen-color: rgb(4, 29, 255);
-    --fourteen-color:rgba(0, 0, 0, 0.801)
+    --fourteen-color: rgba(0, 0, 0, 0.801);
+    --fifteen-color: rgb(25, 0, 250);
 }
 .dark-theme{
     --primary-color:black ;
@@ -36,6 +37,7 @@
     --twelve-color: rgba(255, 255, 255, 0);
     --thirteen-color: white;
     --fourteen-color: black;
+    --fifteen-color: rgb(0, 250, 33);
 }
 
 #mode{
@@ -340,6 +342,14 @@
     color: var(--sixth-color);   /*sixth*/
     font-family: 'Brush Script MT', cursive;
     text-align: center;
+}
+.morerule{
+    font-size: large;
+    color: var(--fifteen-color); 
+    font-family:'Times New Roman', Times, serif;
+    text-align: right;
+    background-color : rgba(139, 118, 0, 0.2);
+    cursor: pointer;
 }
 
 .moveresult{
