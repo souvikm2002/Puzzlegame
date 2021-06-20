@@ -1,6 +1,6 @@
 # Puzzlegame
 
-A Puzzle game that has 4*4 and 3*3 modes which can be played easily by anyone wich a special feature of challange mode.  
+A Puzzle game that has 4-4 and 3-3 modes which can be played easily by anyone wich a special feature of challange mode.  
 
   
 ## Authors
