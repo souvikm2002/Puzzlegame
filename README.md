@@ -38,23 +38,11 @@ CHALLENGE MODE:
     Like if box 10 is blocked for 6sec, then that box cannot be moved for the given time interval
     Rest boxes will be functioning normally
 
-  
-## Screenshots
-Mockups by previewed 
-<!-- ![WhatsApp Image 2021-06-20 at 6 56 42 PM (1)](?raw=true)
-![WhatsApp Image 2021-06-20 at 6 56 42 PM (1)](https://user-images.githubusercontent.com/84197576/122676726-dcb8e280-d1fc-11eb-96f9-5162d209c089.jpeg?raw=true) -->
-<!-- ![WhatsApp Image 2021-06-20 at 6 56 42 PM ](?raw=true)
-![WhatsApp Image 2021-06-20 at 6 56 42 PM](https://user-images.githubusercontent.com/84197576/122676735-eb06fe80-d1fc-11eb-8694-483c1646f011.jpeg?raw=true) -->
+ ## Badges
 
-<table>
-  <tr>
-    <td >Light Mode</td>
-     <td>Dark Mode</td>
-  </tr>
-  <tr>
-    <td><img src="84197576/122676726-dcb8e280-d1fc-11eb-96f9-5162d209c089.jpeg" width=270 height=540></td>
-    <td><img src="84197576/122676735-eb06fe80-d1fc-11eb-8694-483c1646f011.jpeg" width=270 height=540></td>
-  </tr>
- </table>
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+  
 
 
