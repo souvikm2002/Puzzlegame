@@ -340,7 +340,7 @@ function change(){
     let challange=document.getElementById("challange");
     if(!clicked){
         clicked=true;
-        alert("NOTE: CHALLENGE MODE activated!!\nHere, a random box is freezed for 6 seconds, disabling the user to move that particuler box.\nPress 'ok' to continue");
+        alert("NOTE: CHALLENGE MODE activated!!\nHere, a random box is freezed for 6 seconds, disabling the user to move that particular box.\nPress 'ok' to continue");
         //challange.innerText="Challange mode:- ON";
     }
     else{
