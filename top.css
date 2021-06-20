@@ -348,7 +348,7 @@
     color: var(--fifteen-color); 
     font-family:'Times New Roman', Times, serif;
     text-align: right;
-    background-color : rgba(139, 118, 0, 0.2);
+    /*background-color : rgba(139, 118, 0, 0.2);*/
     cursor: pointer;
 }
 
