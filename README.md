@@ -41,7 +41,7 @@ CHALLENGE MODE:
   
 ## Screenshots
 Mockups by previewed 
-![WhatsApp Image 2021-06-20 at 6 56 42 PM (1)](https://user-images.githubusercontent.com/84197576/122676513-0c1b1f80-d1fc-11eb-94df-e3b25a39837e.jpeg)
+
 
 <table>
   <tr>
@@ -49,7 +49,7 @@ Mockups by previewed
      <td>Dark Mode</td>
   </tr>
   <tr>
-    <td><img src="img/image1.jpeg" width=270 height=540></td>
+    <td><img src="![WhatsApp Image 2021-06-20 at 6 56 42 PM (1)](https://user-images.githubusercontent.com/84197576/122676513-0c1b1f80-d1fc-11eb-94df-e3b25a39837e.jpeg)" width=270 height=540></td>
     <td><img src="img/image2.jpeg" width=270 height=540></td>
   </tr>
  </table>
