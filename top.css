@@ -88,10 +88,12 @@
 .footer{
     background-color: var(--fourteen-color) ;   /*fourteen*/
     height: 1.55rem;
-    font-size: 100%;
+    font-size: 92%;
     color:white;
     text-align: center;
     padding-top: 8px;
+    padding-bottom: 5px;
+    font-family: Comic Sans MS;
 }
 .tabledisplay{
     position:absolute;

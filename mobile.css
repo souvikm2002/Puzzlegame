@@ -64,6 +64,7 @@
         border-radius: 2rem;
         border: 5px solid rgb(134, 59, 209);
         font-weight: 160;
+        min-width: fit-content;
     }
     
     .box{
@@ -78,7 +79,12 @@
         font-size:large;
         margin-left: 15%;
         width: 18%;
-        min-width: 12.5rem;
+        min-width:fit-content;   /*12.5rem*/
+    }
+
+    .boxscore{
+        text-align: center;
+        min-width: fit-content;
     }
     
 }
