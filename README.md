@@ -38,22 +38,7 @@ CHALLENGE MODE:
     Like if box 10 is blocked for 6sec, then that box cannot be moved for the given time interval
     Rest boxes will be functioning normally
     
-## Screenshots
-Mockups by previewed
-
-
-
-
-<table>
-  <tr>
-    <td >Light Mode</td>
-     <td>Dark Mode</td>
-  </tr>
-  <tr>
-    <td><img src="![Img 2](https://user-images.githubusercontent.com/84197576/122703567-833dcb80-d26f-11eb-8776-57dc39851279.jpeg)" width=270 height=540></td>
-    <td><img src="![Img1](https://user-images.githubusercontent.com/84197576/122703575-8933ac80-d26f-11eb-8528-9383be6cfbae.jpeg)" width=270 height=540></td>
-  </tr>
- </table>    
+   
 
  ## Badges
 
