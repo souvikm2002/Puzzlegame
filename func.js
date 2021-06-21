@@ -359,11 +359,6 @@ function disrule(){
     alert('INSTRUCTIONS:\n\nWelcome To Puzzlegame!!\n1. Click on suitable boxes to rearrange them\n2. You can swipe multiple boxes at a time if blank box lies in same row/column\n3. When all boxes are arranged in particular order, you can see status message "YOU WIN!!"\n4. Your highest score will be recorded \n5. You can switch between 3*3 and 4*4 puzzle box by clicking "Display 3,3" and "Display 4,4" buttons\n\n  All the best!!');
 }
 
-var preloader=document.getElementById('full');
-function myfunction(){
-    preloader.style.display='none';
-}
-
 
 /*---------------TEST CODES------------*/
 
