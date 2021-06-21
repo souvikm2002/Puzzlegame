@@ -39,7 +39,10 @@ CHALLENGE MODE:
     Rest boxes will be functioning normally
     
 ## Screenshots
-Mockups by previewed 
+Mockups by previewed
+
+
+
 
 <table>
   <tr>
@@ -47,8 +50,8 @@ Mockups by previewed
      <td>Dark Mode</td>
   </tr>
   <tr>
-    <td><img src="" width=270 height=540></td>
-    <td><img src="" width=270 height=540></td>
+    <td><img src="![Img 2](https://user-images.githubusercontent.com/84197576/122703567-833dcb80-d26f-11eb-8776-57dc39851279.jpeg)" width=270 height=540></td>
+    <td><img src="![Img1](https://user-images.githubusercontent.com/84197576/122703575-8933ac80-d26f-11eb-8528-9383be6cfbae.jpeg)" width=270 height=540></td>
   </tr>
  </table>    
 
