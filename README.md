@@ -11,6 +11,7 @@ A Puzzle game that has 4* 4 and 3* 3 modes which can be played easily by anyone 
 ## Features
 
 - Every features including swapping of multiple cells at a time
+- Loading animations
 - Light/dark mode 
 - Highest score is recorded when play in website
 - Challenge mode available
