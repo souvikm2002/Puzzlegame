@@ -239,7 +239,7 @@
     background-color: var(--fourth-color); /*fourth*/
 }
 .leaderboard{
-    font-size:xxx-large;
+    font-size:300%; /*xxx-large*/
     color: var(--eight-color);   /*eight*/
     font-family: 'Brush Script MT', cursive;;
     text-align: center;
@@ -334,7 +334,7 @@
     background-color: rgba(23, 172, 231, 0);
 }
 .rules{
-    font-size:xxx-large;
+    font-size:300%;  /*xxx-large*/
     color: var(--sixth-color);   /*sixth*/
     font-family: 'Brush Script MT', cursive;;
     text-align: center;
