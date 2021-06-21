@@ -13,7 +13,7 @@ A Puzzle game that has 4* 4 and 3* 3 modes which can be played easily by anyone 
 - Every features including swapping of multiple cells at a time
 - Loading animations
 - Light/dark mode 
-- Accepts swipe gestures in touchscreen devices
+- Accept swipe gestures in touchscreen devices
 - Highest score is recorded when play in website
 - Challenge mode available
 - User can play in 4* 4 and 3* 3 puzzle versions
