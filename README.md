@@ -37,6 +37,20 @@ CHALLENGE MODE:
     In this mode a random box is blocked for 6secs.
     Like if box 10 is blocked for 6sec, then that box cannot be moved for the given time interval
     Rest boxes will be functioning normally
+    
+## Screenshots
+Mockups by previewed 
+
+<table>
+  <tr>
+    <td >Light Mode</td>
+     <td>Dark Mode</td>
+  </tr>
+  <tr>
+    <td><img src="https://drive.google.com/file/d/1TL7h0h73b3VI_AUIikVQPczcb3HUJcsC/view?usp=sharing" width=270 height=540></td>
+    <td><img src="https://drive.google.com/file/d/1oms_CTUy31ziFLODa-euO4G_BMPHTULr/view?usp=sharing" width=270 height=540></td>
+  </tr>
+ </table>    
 
  ## Badges
 
