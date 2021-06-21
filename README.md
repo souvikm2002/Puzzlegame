@@ -47,8 +47,8 @@ Mockups by previewed
      <td>Dark Mode</td>
   </tr>
   <tr>
-    <td><img src="https://drive.google.com/file/d/1TL7h0h73b3VI_AUIikVQPczcb3HUJcsC/view?usp=sharing" width=270 height=540></td>
-    <td><img src="https://drive.google.com/file/d/1oms_CTUy31ziFLODa-euO4G_BMPHTULr/view?usp=sharing" width=270 height=540></td>
+    <td><img src="" width=270 height=540></td>
+    <td><img src="" width=270 height=540></td>
   </tr>
  </table>    
 
