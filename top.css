@@ -440,3 +440,61 @@ input:checked[type="checkbox"]:before
 {
     left:1rem;
 }
+
+#full{                       /* class for loading website*/
+    height:100%;
+    width: 100%;
+    background-color: rgb(234, 241, 243);
+    position: absolute;
+    z-index: 10;
+}
+
+
+.container{
+    width: 100px;
+    margin: 25% auto;
+    margin-top: 22rem;
+}
+
+.dot{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    /*background-color: white;*/
+}
+
+.dot1{
+    background-color: rgb(8, 124, 28);
+    animation: jump-up 0.7s 0.1s linear infinite;
+}
+.dot2{
+    background-color: rgb(230, 245, 14);
+    animation: jump-up 0.7s 0.2s linear infinite;
+}
+.dot3{
+    background-color: rgb(13, 24, 173);
+    animation: jump-up 0.7s 0.3s linear infinite;
+}
+.dot4{
+    background-color: rgb(240, 51, 51);
+    animation: jump-up 0.7s 0.4s linear infinite;
+}
+
+@keyframes jump-up{
+    50%{
+        transform: translate(0,15px);
+    }
+}
+
+/*@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}*/
+
+/*.hidden{             hidden classname added in js
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}*/
