@@ -30,8 +30,9 @@ A Puzzle game that has 4* 4 and 3* 3 modes which can be played easily by anyone 
 INSTRUCTIONS:
 
     1.Click on boxes having the blank box in its row or column
-    2.Doing this  will shift the boxes toward the blank box direction by one step
-    3.Shift the number until they come in a ascending order/sequence
+    2.Doing this will shift the boxes toward the blank box direction by one step
+    3.One or more boxes can be shifted at a time belonging to same row/column of blank box
+    4.Shift the number until they come in a ascending order/sequence
     
     All the best!
 
