@@ -17,6 +17,7 @@ A Puzzle game that has 4* 4 and 3* 3 modes which can be played easily by anyone 
 - Highest score is recorded when play in website
 - Challenge mode available
 - User can play in 4* 4 and 3* 3 puzzle versions
+- Responsive website
 
 
 ## License
