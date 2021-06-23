@@ -21,7 +21,7 @@
     --thirteen-color: rgb(4, 29, 255);
     --fourteen-color: rgba(0, 0, 0, 0.801);
     --fifteen-color: rgb(25, 0, 250);
-    --sixteen-color: rgb(24, 97, 131);
+    --sixteen-color: rgb(25, 45, 136);
 }
 .dark-theme{
     --primary-color:black ;
@@ -72,8 +72,10 @@
     margin-left: 50%;
     transform: translate(-50%);
     position: absolute;
+    font-size: 58px;
+    font-weight: bold;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    animation: blink 2s linear infinite;
+    animation: blink 3s linear infinite;
 }
 .ul3{
     margin-left: 90%;
@@ -511,6 +513,5 @@ input:checked[type="checkbox"]:before
 @keyframes blink {
     50%{
         color: var(--sixteen-color);
-        font-size: 58px;
     }
 }
