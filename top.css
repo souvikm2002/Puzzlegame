@@ -21,6 +21,7 @@
     --thirteen-color: rgb(4, 29, 255);
     --fourteen-color: rgba(0, 0, 0, 0.801);
     --fifteen-color: rgb(25, 0, 250);
+    --sixteen-color: rgb(24, 97, 131);
 }
 .dark-theme{
     --primary-color:black ;
@@ -38,6 +39,7 @@
     --thirteen-color: white;
     --fourteen-color: black;
     --fifteen-color: rgb(0, 250, 33);
+    --sixteen-color: rgb(25, 236, 35);
 }
 
 #mode{
@@ -70,6 +72,8 @@
     margin-left: 50%;
     transform: translate(-50%);
     position: absolute;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    animation: blink 2s linear infinite;
 }
 .ul3{
     margin-left: 90%;
@@ -99,7 +103,7 @@
     position:absolute;
     display: table;
     border: 4px solid var(--nine-color);  /*nine*/
-    margin-top: 10rem;
+    margin-top: 10.5rem;
     margin-left: 48%;
     width:25rem;
     height:25.2rem;
@@ -107,19 +111,21 @@
     border-radius: 12px;
     padding: 3px;
     transition-duration: 0s;
+    box-shadow: 0 0 20px rgb(47, 47, 58);
 }
 
 .tabledisplay2{
     position:absolute;
     display: table;
     border: 4px solid var(--nine-color);
-    margin-top: 10rem;
+    margin-top: 10.5rem;
     margin-left: 48%;
     width:25rem;
     height:25rem;
     transform: translate(-50%);
     border-radius: 12px;
     padding: 3px;
+    box-shadow: 0 0 20px rgb(47, 47, 58);
 }
 
 .align{
@@ -387,6 +393,19 @@
     clip-path: polygon(0 0 , 100% 0,100% 10%, 60% 10%, 40% 60% ,25% 100%,0 100%);
 }
 
+.color1{
+    position: absolute;
+    background-color: rgba(231, 171, 17, 0.288);
+    height: 36rem;
+    width:92%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 7rem;
+    border-radius: 10px;
+    z-index: -2;
+    clip-path: polygon(70% 50%, 100% 50%,100% 100%,50% 100% );
+}
+
 .links{
     display:none;
 }
@@ -489,14 +508,9 @@ input:checked[type="checkbox"]:before
     }
 }
 
-/*@keyframes fadeOut{
-    100%{
-        opacity: 0;
-        visibility: hidden;
+@keyframes blink {
+    50%{
+        color: var(--sixteen-color);
+        font-size: 58px;
     }
-}*/
-
-/*.hidden{             hidden classname added in js
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-}*/
+}
