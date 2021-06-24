@@ -43,7 +43,7 @@
         justify-content: space-evenly;
         width: 33rem;
         transform:translate(-50%) ;
-        margin-left: 50%;
+        margin-left: 50%;   /*align to center*/
     }
 
     .challangebox{
