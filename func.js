@@ -23,6 +23,7 @@ function shuffle(){
             swapTiles("cells"+row+column,"cells"+row2+column2);
         }
     }
+    document.getElementById("timer").innerText=`0 : 0`;   //edited
     clearInterval(clock);
     displaytime();
     moves=0;
@@ -58,6 +59,7 @@ function togglehide1(){   //display 4*4
         table2.style.display='none';
     }
     table.style.display='block';
+    document.getElementById("timer").innerText=`0 : 0`;   //edited
     clearInterval(clock);
     displaytime();
     moves=0;
@@ -73,6 +75,7 @@ function togglehide2(){   //display 3*3
         table.style.display='none';
     }
     table2.style.display='block';
+    document.getElementById("timer").innerText=`0 : 0`;   //edited
     clearInterval(clock);   //we directly say to clear the setinterval clock
     displaytime();     //we again start displaytime
     moves=0;
@@ -234,10 +237,11 @@ let min;
 function displaytime(){
     counttimer=0;
     clock=setInterval(()=>{      //clock = setInterval(()=>{},1000); same as clock = setInterval(function,1000);
+        if(moves>0){
         counttimer++;
         sec=counttimer%60;
         min=parseInt(counttimer/60);
-        timer.innerText=`  ${min} : ${sec} `;
+        timer.innerText=`  ${min} : ${sec} `;}   //edited . Gave if condition
     },1000);
 }
 
